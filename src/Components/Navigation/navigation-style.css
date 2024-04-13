@@ -1,0 +1,22 @@
+.nav {
+    width: 100%;
+    color: #fff;
+}
+.nav .logo-nav {
+    color: #fff;
+    font-weight: 700;
+}
+.nav .logo-nav:hover {
+    color: #fff;
+}
+.span-logo {
+    color: crimson;
+    font-weight: 900;
+}
+.nav-item .nav-link {
+    color: #fff;
+}
+.nav-item .nav-link:hover {
+    color: #fff;
+}
+
