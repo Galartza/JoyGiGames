@@ -51,35 +51,21 @@
     border-radius: 5px;
     background: crimson;
     border: 1px solid transparent;
+    font-size: 20px;
     display: flex;
     align-items: center;
-    font-size: 15px;
-    color: #fff
+    justify-content: center;
+    color: #fff;
+    width: 10rem;
   }
   
   .btn-home:hover {
     background: rgb(185, 36, 66);
   }
-  
-  .btn-home > svg {
-    width: 34px;
-    margin-left: 10px;
-    transition: transform .3s ease-in-out;
-    color: #fff;
-  }
-  
-  .btn-home:hover svg {
-    transform: translateX(5px);
-  }
-  
-  .btn-home:active {
-    transform: scale(0.95);
-  }
-  
   @media (max-width: 992px) {
     .btn-home {
-        width: 35vw;
-        height: 50px;
+        width: 6rem;
+        height: 2rem;
         font-size: 10px;
     }
     .logo-home {
