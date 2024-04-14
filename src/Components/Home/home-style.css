@@ -5,10 +5,92 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .home-contain {
     height: 100vh;
     width: 100%;
-    background-color: rgba(220, 20, 60, 0.05);
+    background-color: rgba(0, 0, 0, 0.59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
+
+.contain {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+}
+.logo-home {
+    font-size: 10vw;
+}
+
+
+.title-home {
+    font-size: 4vw;
+    line-height: 1;
+}
+
+.btn-home {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: crimson;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #fff
+  }
+  
+  .btn-home:hover {
+    background: rgb(185, 36, 66);
+  }
+  
+  .btn-home > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+    color: #fff;
+  }
+  
+  .btn-home:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .btn-home:active {
+    transform: scale(0.95);
+  }
+  
+  @media (max-width: 992px) {
+    .btn-home {
+        width: 35vw;
+        height: 50px;
+        font-size: 10px;
+    }
+    .logo-home {
+        font-size: 10vw;
+    }
+    
+    
+    .title-home {
+        font-size: 5vw;
+        line-height: 1;
+    }
+    
+}
+  

@@ -19,7 +19,7 @@ function Navigation(args) {
 
   return (
     <div>
-      <Navbar className='nav' fixed='top' {...args}>
+      <Navbar className='nav navbar-expand-lg navbar-dark bg-dark' fixed='top' {...args}>
         <NavbarBrand className='logo-nav' href="/">JoyGi<span className='span-logo'>Games</span></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
