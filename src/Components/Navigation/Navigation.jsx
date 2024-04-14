@@ -1,4 +1,4 @@
-
+import './navigation-style.css';
 import React, { useState } from 'react';
 import {
   Collapse,
