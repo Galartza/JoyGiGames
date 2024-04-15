@@ -8,6 +8,10 @@ import {
   Nav,
   NavItem,
   NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import '../Navigation/navigation-style.css';
 
@@ -25,21 +29,40 @@ function Navigation(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link' href="/components/">Home</NavLink>
+              <NavLink className='nav-link' href="/">Home</NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link' href="https://github.com/reactstrap/reactstrap">
-                Collection
-              </NavLink>
+
+              <UncontrolledDropdown className='uncontrolled-dropdown' nav inNavbar>
+              <DropdownToggle className='nav-toggle' nav caret>
+                Collections
+              </DropdownToggle>
+              <DropdownMenu className='drop_down-menu' right>
+                <DropdownItem className='drop-item'>Option 1</DropdownItem>
+                <DropdownItem className='drop-item'>Option 2</DropdownItem>
+                <DropdownItem className='drop-item'>Option 3</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link' href="https://github.com/reactstrap/reactstrap">
+              <NavLink className='nav-link' href="">
                 Opinions
               </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link' href="https://github.com/reactstrap/reactstrap">
+              <NavLink className='nav-link' href="">
                 Contact
+              </NavLink>
+            </NavItem>
+            <NavItem className='nav-item'>
+              <NavLink className='nav-link sign-in' href="">
+                Sign in
+              </NavLink>
+            </NavItem>
+            <NavItem className='nav-item'>
+              <NavLink className='nav-link register' href="">
+                Register
               </NavLink>
             </NavItem>
           </Nav>

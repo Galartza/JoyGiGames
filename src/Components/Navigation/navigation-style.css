@@ -5,7 +5,8 @@
 .navbar-nav {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
+
   }
 
 .nav .logo-nav {
@@ -26,4 +27,62 @@
 .nav-item .nav-link:hover {
     color: #fff;
 }
+.nav-item .sign-in {
+    border: solid 1px crimson;
+    margin: 0 5px;
+}
+.nav-item .sign-in:hover {
+    background-color: crimson;
+}
+.nav-item .register {
+    background-color: crimson;
+    padding:9px 0;
+}
+.nav-item .register:hover {
+    background-color: rgba(220, 20, 60, 0.705);
 
+}
+.uncontrolled-dropdown .drop_down-menu {
+    background-color: #000;
+    color: #fff;
+
+}
+.uncontrolled-dropdown .drop_down-menu .drop-item {
+    color: #fff;
+}
+
+.uncontrolled-dropdown .drop_down-menu .drop-item:hover {
+    color: #000;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+
+}
+@media (max-width: 992px) {
+    .nav-item .sign-in {
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto 1rem;
+    }
+    .nav-item .sign-in:hover {
+        background-color: crimson;
+    }
+    .nav-item .register {
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+    }
+}
