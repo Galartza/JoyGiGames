@@ -1,5 +1,5 @@
 .Asset {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background-color: #000;
     color: #fff;
@@ -8,7 +8,7 @@
 
 
 .asset-contain {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.59);
     display: flex;
@@ -46,6 +46,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 @keyframes bounce {

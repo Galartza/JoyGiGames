@@ -1,5 +1,87 @@
 .Collection {
-    height: 100vh;
+    height: auto; /* En lugar de una altura fija, permite que la altura se ajuste automáticamente */
+    min-height: 100vh; /* Establece una altura mínima para asegurar que el contenido se pueda desplazar si es necesario */
     width: 100%;
+    background-color: #000;
+}
+
+.collection-contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de flexión para apilar los elementos verticalmente en pantallas más pequeñas */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Agrega un relleno alrededor del contenido */
+}
+
+.contain {
+    width: 100%;
+}
+
+.Card-contain {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1200px; /* Establece un ancho máximo para las tarjetas */
+    margin-bottom: 2rem;
+}
+
+.Card-contain .card-img {
+    max-width: 100%; /* Hace que la imagen sea completamente receptiva */
+}
+
+.Card-contain .card-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Card-contain .card-content .card-title {
+    color: crimson;
+    font-size: 4rem; /* Utiliza medidas relativas para el tamaño de fuente */
+ 
+}
+
+.Card-contain .card-content .card-text {
+    color: #fff;
+    font-size: 1.5rem; /* Utiliza medidas relativas para el tamaño de fuente */
+
+}
+
+.Card-contain .card-content .card-btn {
     background-color: crimson;
+    border: none;
+    padding: .5rem 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem; /* Utiliza medidas relativas para el tamaño de fuente */
+}
+
+
+@media (max-width: 768px) {
+    .collection-contain {
+        flex-direction: column; /* Cambia la dirección de flexión para mostrar las tarjetas en línea en pantallas más grandes */
+        align-items: flex-start; /* Alinéa los elementos al principio */
+    }
+
+    .Card-contain {
+        max-width: none; /* Elimina el ancho máximo para permitir que las tarjetas ocupen el ancho disponible */
+        display: flex;
+        flex-direction: column;
+    }
+    .Card-contain .card-content .card-title {
+        font-size: 1.5rem; /* Utiliza medidas relativas para el tamaño de fuente */
+     
+    }
+    .Card-contain .card-content .card-text {
+
+        font-size: 1rem; /* Utiliza medidas relativas para el tamaño de fuente */
+    
+    }
+    .Card-contain .card-content .card-btn {
+
+        font-size: 1rem; /* Utiliza medidas relativas para el tamaño de fuente */
+    }
+    
 }

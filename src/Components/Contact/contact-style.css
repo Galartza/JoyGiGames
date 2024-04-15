@@ -1,5 +1,15 @@
 .Contact {
     height: 100vh;
     width: 100%;
-    background-color: crimson;
+    background-image: url('../../assets/img-contact.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-contain {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
 }

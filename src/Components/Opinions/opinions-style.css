@@ -1,14 +1,58 @@
 .Opinions {
-    height: 100vh;
+    height: auto; /* Cambia la altura a 'auto' para que se ajuste automáticamente al contenido */
+    min-height: 60vh; /* Agrega una altura mínima para evitar que el contenido se comprima demasiado */
     width: 100%;
-    background-image: url('../../assets/home-img.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #000;
 }
 
 .opinions-contain {
-    height: 100vh;
+    height: auto; /* Cambia la altura a 'auto' para que se ajuste automáticamente al contenido */
     width: 100%;
-    background-color: rgba(220, 20, 60, 0.05);
+    max-width: 1500px; /* Establece un ancho máximo para evitar que el contenido se expanda demasiado en pantallas grandes */
+    margin: 0 auto;
+    padding: 0 20px; /* Agrega un relleno horizontal para evitar que el contenido toque los bordes de la pantalla */
+}
+
+.contain-opinions {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de flexión a 'columna' en pantallas pequeñas para apilar los elementos verticalmente */
+    width: 100%;
+    padding: 2rem;
+}
+
+.title-opinions {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.content-opinions {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.title-card-op {
+    color: crimson;
+    font-size: 2rem;
+}
+
+.text-card-op {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: start; /* Centra el texto en pantallas pequeñas */
+}
+
+@media (min-width: 768px) {
+    .contain-opinions {
+        flex-direction: row; /* Cambia la dirección de flexión a 'fila' en pantallas medianas y grandes */
+    }
+
+    .content-opinions {
+        padding: 0 2rem; /* Aumenta el espacio entre los elementos en pantallas medianas y grandes */
+    }
+
+    .text-card-op {
+        width: auto; /* Elimina el ancho fijo en pantallas medianas y grandes para permitir que el texto se ajuste según sea necesario */
+    }
 }
