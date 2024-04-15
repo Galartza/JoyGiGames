@@ -14,7 +14,7 @@ function App() {
     <Asset />
     <Collection />
     <Opinions />
-    <Contact />
+    {/* <Contact /> */}
     </>
   )
 }

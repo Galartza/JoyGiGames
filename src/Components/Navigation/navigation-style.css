@@ -43,7 +43,7 @@
 
 }
 .uncontrolled-dropdown .drop_down-menu {
-    background-color: #000;
+    background-color: crimson;
     color: #fff;
 
 }
@@ -52,7 +52,8 @@
 }
 
 .uncontrolled-dropdown .drop_down-menu .drop-item:hover {
-    color: #000;
+    color: #fff;
+    background-color: #000;
 }
 
 
