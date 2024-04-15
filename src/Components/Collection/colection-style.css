@@ -57,12 +57,16 @@
     text-transform: uppercase;
     font-size: 1rem; /* Utiliza medidas relativas para el tamaño de fuente */
 }
-
-
+@media (max-width: 1030px) {
+    .Card-contain .card-content .card-title {
+        font-size: 2rem;
+    }
+}
 @media (max-width: 768px) {
     .collection-contain {
         flex-direction: column; /* Cambia la dirección de flexión para mostrar las tarjetas en línea en pantallas más grandes */
         align-items: flex-start; /* Alinéa los elementos al principio */
+
     }
 
     .Card-contain {

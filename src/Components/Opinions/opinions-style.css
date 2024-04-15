@@ -15,14 +15,14 @@
 
 .contain-opinions {
     display: flex;
-    flex-direction: column; /* Cambia la dirección de flexión a 'columna' en pantallas pequeñas para apilar los elementos verticalmente */
+    flex-direction: row; /* Cambia la dirección de flexión a 'columna' en pantallas pequeñas para apilar los elementos verticalmente */
     width: 100%;
     padding: 2rem;
 }
 
 .title-opinions {
     color: #fff;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     padding-top: 5rem;
 }
@@ -43,9 +43,9 @@
     text-align: start; /* Centra el texto en pantallas pequeñas */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .contain-opinions {
-        flex-direction: row; /* Cambia la dirección de flexión a 'fila' en pantallas medianas y grandes */
+        flex-direction: column; /* Cambia la dirección de flexión a 'fila' en pantallas medianas y grandes */
     }
 
     .content-opinions {
@@ -54,5 +54,19 @@
 
     .text-card-op {
         width: auto; /* Elimina el ancho fijo en pantallas medianas y grandes para permitir que el texto se ajuste según sea necesario */
+    }
+    .title-opinions {
+
+        font-size: 2rem;
+    }
+    .title-card-op {
+
+        font-size: 1.5rem;
+    }
+    
+    .text-card-op {
+
+        font-size: 1rem;
+
     }
 }
