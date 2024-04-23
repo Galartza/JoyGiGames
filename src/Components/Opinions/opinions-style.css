@@ -1,16 +1,18 @@
 .Opinions {
-    height: auto; /* Cambia la altura a 'auto' para que se ajuste automáticamente al contenido */
-    min-height: 60vh; /* Agrega una altura mínima para evitar que el contenido se comprima demasiado */
+    height: 20rem; /* Cambia la altura a 'auto' para que se ajuste automáticamente al contenido */
     width: 100%;
     background-color: #000;
 }
 
 .opinions-contain {
-    height: auto; /* Cambia la altura a 'auto' para que se ajuste automáticamente al contenido */
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 1500px; /* Establece un ancho máximo para evitar que el contenido se expanda demasiado en pantallas grandes */
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 20px; /* Agrega un relleno horizontal para evitar que el contenido toque los bordes de la pantalla */
+    padding: 0 20px;/* Agrega un relleno horizontal para evitar que el contenido toque los bordes de la pantalla */
 }
 
 .contain-opinions {
@@ -29,7 +31,7 @@
 
 .content-opinions {
     flex: 1;
-    padding: 0 1rem;
+    padding: 5rem 20rem;
 }
 
 .title-card-op {
@@ -44,15 +46,18 @@
 }
 
 @media (max-width: 768px) {
+    .Opinions {
+        height: 30rem;
+    }
     .contain-opinions {
-        height: 20rem;
+        height: 30rem;
         flex-direction: column; /* Cambia la dirección de flexión a 'fila' en pantallas medianas y grandes */
     }
 
     .content-opinions {
     
-        padding: 0 2rem;
-        margin-top: 7rem;
+        padding: 5rem;
+        margin-top: 2rem;
     }
 
     .text-card-op {
@@ -73,3 +78,4 @@
 
     }
 }
+

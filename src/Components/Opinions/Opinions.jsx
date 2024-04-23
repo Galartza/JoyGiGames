@@ -65,14 +65,8 @@ function Opinions() {
   });
 
   return (
-    <div>
-      <style>
-        {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: black;
-            }`}
-      </style>
+    <div className="Opinions">
+       <div className='custom-tag opinions-contain'>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={opinions}
@@ -92,6 +86,8 @@ function Opinions() {
         />
       </Carousel>
     </div>
+    </div>
+   
   );
 }
 
