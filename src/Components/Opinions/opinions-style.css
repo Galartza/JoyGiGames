@@ -45,11 +45,14 @@
 
 @media (max-width: 768px) {
     .contain-opinions {
+        height: 20rem;
         flex-direction: column; /* Cambia la dirección de flexión a 'fila' en pantallas medianas y grandes */
     }
 
     .content-opinions {
-        padding: 0 2rem; /* Aumenta el espacio entre los elementos en pantallas medianas y grandes */
+    
+        padding: 0 2rem;
+        margin-top: 7rem;
     }
 
     .text-card-op {
