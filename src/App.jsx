@@ -4,6 +4,7 @@ import Asset from './Components/Asset/Asset'
 import Collection from './Components/Collection/Collection'
 import Opinions from './Components/Opinions/Opinions'
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
     <Asset />
     <Collection />
     <Opinions />
-    {/* <Contact /> */}
+    <Contact /> 
+    {/* < Footer /> */}
     </>
   )
 }

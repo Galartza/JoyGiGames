@@ -1,4 +1,3 @@
-import './navigation-style.css';
 import React, { useState } from 'react';
 import {
   Collapse,
@@ -11,39 +10,41 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Modal,
+  Button
 } from 'reactstrap';
-import '../Navigation/navigation-style.css';
-
+import Example from '../Modal/Modal';
+import './navigation-style.css';
 
 function Navigation(args) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenNavbar, setIsOpenNavbar] = useState(false); // Estado para el menú de navegación
+  const [isOpenModal, setIsOpenModal] = useState(false); // Estado para el modal de inicio de sesión y registro
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => setIsOpenNavbar(!isOpenNavbar);
+  const toggleModal = () => setIsOpenModal(!isOpenModal);
 
   return (
     <div>
       <Navbar className='nav navbar-expand-lg navbar-dark' fixed='top' {...args}>
         <NavbarBrand className='logo-nav' href="/">JoyGi<span className='span-logo'>Games</span></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <NavbarToggler onClick={toggleNavbar} />
+        <Collapse isOpen={isOpenNavbar} navbar>
           <Nav className="me-auto" navbar>
             <NavItem className='nav-item'>
               <NavLink className='nav-link' href="/">Home</NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-
               <UncontrolledDropdown className='uncontrolled-dropdown' nav inNavbar>
-              <DropdownToggle className='nav-toggle' nav caret>
-                Collections
-              </DropdownToggle>
-              <DropdownMenu className='drop_down-menu' right>
-                <DropdownItem className='drop-item'>Option 1</DropdownItem>
-                <DropdownItem className='drop-item'>Option 2</DropdownItem>
-                <DropdownItem className='drop-item'>Option 3</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-
+                <DropdownToggle className='nav-toggle' nav caret>
+                  Collections
+                </DropdownToggle>
+                <DropdownMenu className='drop_down-menu' right>
+                  <DropdownItem className='drop-item'>Option 1</DropdownItem>
+                  <DropdownItem className='drop-item'>Option 2</DropdownItem>
+                  <DropdownItem className='drop-item'>Option 3</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </NavItem>
             <NavItem className='nav-item'>
               <NavLink className='nav-link' href="">
@@ -56,22 +57,22 @@ function Navigation(args) {
               </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link sign-in' href="">
+              <Button className='nav-link sign-in' onClick={toggleModal}>
                 Sign in
-              </NavLink>
+              </Button>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink className='nav-link register' href="">
+              <Button className='nav-link register' onClick={toggleModal}>
                 Register
-              </NavLink>
+              </Button>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
+      {/* Aquí agregas el modal */}
+      <Example isOpen={isOpenModal} toggle={toggleModal} />
     </div>
   );
 }
-
-
 
 export default Navigation;
