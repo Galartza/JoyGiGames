@@ -87,3 +87,16 @@
         margin: 0 auto;
     }
 }
+
+.canva {
+    background-color: #000 !important;
+}
+.offcanvas-title {
+    color: #fff !important;
+}
+
+.container-btns-canva {
+    position: absolute;
+    bottom: 3rem;
+
+}

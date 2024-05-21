@@ -16,6 +16,10 @@ function Register() {
         <label htmlFor="password" className="form-label">Contraseña</label>
         <input type="password" className="form-control" id="password" />
       </div>
+      <div className="mb-3">
+        <label htmlFor="password" className="form-label">Contraseña</label>
+        <input type="password" className="form-control" id="password" />
+      </div>
       <button type="submit" className="btn btn-primary">Registrarse</button>
     </form>
   );
